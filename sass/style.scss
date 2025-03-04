@@ -15,6 +15,7 @@ body {
     font-family: "Manrope", sans-serif;
     background-color: $veryLightBlue;
     font-size: 1.6rem;
+    overflow-x: hidden ;
 }
 
 img {
@@ -29,21 +30,16 @@ img {
             background-color: $pureWhite;
             border-radius: 10px;
             box-shadow: 3px 3px 5px #2e2e2e2e;
-            overflow: hidden;
         }
         &__card-img {
             width: 100%;
             border-radius: 10px 10px 0 0;
-            transition: transform .3s;
-
-            &:hover {
-                transform: scale(1.1);
-            }
         }
         &__card-body {
             position: relative;
             padding: 3em 1.5em 0;
             background-color: $pureWhite;
+            border-radius: 0 0 10px 10px;
             z-index: 10;
         }
         &__card-title {
@@ -163,7 +159,6 @@ img {
 @media(576px <= width) {
     .cards {
         height: 100vh;
-        padding: 1em;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -201,7 +196,37 @@ img {
                 font-size: 1.4rem;
             }
 
-            
+            &__card-social-box {
+                width: 250px;
+                height: 60px;
+                justify-content: center;
+                align-items: center;
+                inset-inline: unset;
+                bottom: 6em;
+                right: 10px;
+                background-color: $veryDarkBlue;
+                border-radius: 10px;
+                transform: rotate(30deg) translate(30px, 50px);
+                transition: transform .2s cubic-bezier(0.25, 0.1, 0.12, 1.73), opacity .1s, visibility .1s;
+
+                &.active {
+                    visibility: visible;
+                    opacity: 1;
+                    transform: rotate(0) translate(0);
+                }
+
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        bottom: -1em;
+                        right: 1.5em;
+                        width: 0; 
+                        height: 0; 
+                        border-left: 15px solid transparent;
+                        border-right: 15px solid transparent;
+                        border-top: 20px solid $veryDarkBlue;
+                    }
+            }
             
     }
     
@@ -231,6 +256,33 @@ img {
             font-size: 1.7rem;
             line-height: 30px;
         }
+
+        &__card-social-box {
+            bottom: 7em;
+
+                &::after {
+                    bottom: -1em;
+                    right: 2em;
+                }
+        }
    
+    }
+}
+
+@media(1150px <= width) {
+    .cards {
+
+        &__card-social-box {
+            width: 280px;
+            right: -80px;
+
+            &::after {
+                bottom: -1em;
+                right: 50%;
+                transform: translateX(50%);
+            }
+            
+     }
+
     }
 }

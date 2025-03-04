@@ -12,6 +12,7 @@ body {
   font-family: "Manrope", sans-serif;
   background-color: hsl(210, 46%, 95%);
   font-size: 1.6rem;
+  overflow-x: hidden;
 }
 
 img {
@@ -26,20 +27,16 @@ img {
   background-color: hsl(0, 0%, 100%);
   border-radius: 10px;
   box-shadow: 3px 3px 5px rgba(46, 46, 46, 0.1803921569);
-  overflow: hidden;
 }
 .cards__card-img {
   width: 100%;
   border-radius: 10px 10px 0 0;
-  transition: transform 0.3s;
-}
-.cards__card-img:hover {
-  transform: scale(1.1);
 }
 .cards__card-body {
   position: relative;
   padding: 3em 1.5em 0;
   background-color: hsl(0, 0%, 100%);
+  border-radius: 0 0 10px 10px;
   z-index: 10;
 }
 .cards__card-title {
@@ -135,7 +132,6 @@ img {
 @media (576px <= width) {
   .cards {
     height: 100vh;
-    padding: 1em;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -171,6 +167,35 @@ img {
   .cards__card-footer-text {
     font-size: 1.4rem;
   }
+  .cards__card-social-box {
+    width: 250px;
+    height: 60px;
+    justify-content: center;
+    align-items: center;
+    inset-inline: unset;
+    bottom: 6em;
+    right: 10px;
+    background-color: hsl(217, 19%, 35%);
+    border-radius: 10px;
+    transform: rotate(30deg) translate(30px, 50px);
+    transition: transform 0.2s cubic-bezier(0.25, 0.1, 0.12, 1.73), opacity 0.1s, visibility 0.1s;
+  }
+  .cards__card-social-box.active {
+    visibility: visible;
+    opacity: 1;
+    transform: rotate(0) translate(0);
+  }
+  .cards__card-social-box::after {
+    content: "";
+    position: absolute;
+    bottom: -1em;
+    right: 1.5em;
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 20px solid hsl(217, 19%, 35%);
+  }
 }
 @media (768px <= width) {
   .cards__card-link {
@@ -192,5 +217,23 @@ img {
   .cards__card-text {
     font-size: 1.7rem;
     line-height: 30px;
+  }
+  .cards__card-social-box {
+    bottom: 7em;
+  }
+  .cards__card-social-box::after {
+    bottom: -1em;
+    right: 2em;
+  }
+}
+@media (1150px <= width) {
+  .cards__card-social-box {
+    width: 280px;
+    right: -80px;
+  }
+  .cards__card-social-box::after {
+    bottom: -1em;
+    right: 50%;
+    transform: translateX(50%);
   }
 }/*# sourceMappingURL=style.css.map */
