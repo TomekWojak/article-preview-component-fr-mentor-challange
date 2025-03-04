@@ -56,7 +56,7 @@ img {
   border-radius: 50%;
 }
 .cards__card-footer-info {
-  margin-inline-start: 1em;
+  margin-inline-start: 0.5em;
 }
 .cards__card-footer-title {
   color: hsl(217, 19%, 35%);
@@ -80,21 +80,31 @@ img {
   color: hsl(214, 17%, 51%);
   background-color: hsl(210, 46%, 95%);
   border-radius: 50%;
+  cursor: pointer;
   z-index: 1000;
+  transition: background-color 0.3s, color 0.3s;
+}
+.cards__card-link:hover {
+  background-color: hsl(214, 17%, 51%);
+  color: hsl(0, 0%, 100%);
 }
 .cards__card-social-box {
   position: absolute;
-  display: none;
+  display: flex;
+  justify-content: flex-start;
   align-items: center;
-  padding: 2em 3em;
   inset-inline: 0;
   bottom: 0;
   height: 80px;
   background-color: hsl(217, 19%, 35%);
   border-radius: 0 0 10px 10px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s, visibility 0.4s;
 }
 .cards__card-social-box.active {
-  display: flex;
+  visibility: visible;
+  opacity: 1;
 }
 .cards__card-social-box span {
   font-size: 1.6rem;
@@ -102,12 +112,16 @@ img {
   letter-spacing: 5px;
   color: hsl(212, 23%, 69%);
   font-weight: 300;
-  margin-inline-end: 1em;
+  margin-inline: 1em 0.5em;
 }
 .cards__card-social-link {
   margin: 0.3em;
-  font-size: 2.6rem;
+  font-size: 2.4rem;
   color: hsl(0, 0%, 100%);
+  transition: color 0.3s;
+}
+.cards__card-social-link:hover {
+  color: hsl(212, 23%, 69%);
 }
 
 @media (576px <= width) {

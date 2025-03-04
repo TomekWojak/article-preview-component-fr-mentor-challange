@@ -60,7 +60,7 @@ img {
         }
 
         &__card-footer-info {
-            margin-inline-start: 1em;
+            margin-inline-start: .5em;
         }
 
         &__card-footer-title {
@@ -88,22 +88,35 @@ img {
             color: $darkBlue;
             background-color: $veryLightBlue;
             border-radius: 50%;
+            cursor: pointer;
             z-index: 1000;
+            transition: background-color .3s, color .3s;
+
+                &:hover {
+                    background-color: $darkBlue;
+                    color: $pureWhite;
+                }
         }
 
         &__card-social-box {
             position: absolute;
-            display: none;
+            display: flex;
+            justify-content: flex-start;
             align-items: center;
-            padding: 2em 3em;
             inset-inline: 0;
             bottom: 0;
             height: 80px;
             background-color: $veryDarkBlue;
             border-radius: 0 0 10px 10px;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity .4s, visibility .4s;
+
+
 
                 &.active {
-                    display: flex;
+                    visibility: visible;
+                    opacity: 1;
                 }
 
                 span {
@@ -112,14 +125,19 @@ img {
                     letter-spacing: 5px;
                     color: $lightBlue;
                     font-weight: 300;
-                    margin-inline-end: 1em;
+                    margin-inline: 1em .5em;
                 }
         }
 
         &__card-social-link {
             margin: 0.3em;
-            font-size: 2.6rem;
+            font-size: 2.4rem;
             color: $pureWhite;
+            transition: color .3s;
+
+                &:hover {
+                    color: $lightBlue;
+                }
         }
 
 }
