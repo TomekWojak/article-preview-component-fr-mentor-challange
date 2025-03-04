@@ -11,7 +11,6 @@ html {
     font-size: 62.5%;
 }
 
-
 body {
     font-family: "Manrope", sans-serif;
     background-color: $veryLightBlue;
@@ -23,6 +22,107 @@ img {
     font-style: italic;
 }
 
+
+.cards {
+    padding: 6em 1em;
+        &__card {
+            background-color: $pureWhite;
+            border-radius: 10px;
+        }
+        &__card-img {
+            width: 100%;
+            border-radius: 10px 10px 0 0;
+        }
+        &__card-body {
+            position: relative;
+            padding: 3em 1.5em 0;   
+        }
+        &__card-title {
+            color: $veryDarkBlue;
+            font-size: 1.9rem;
+            margin-block-end: 1em;
+        }
+        &__card-text {
+            line-height: 25px;
+            color: $darkBlue;
+            font-size: 1.4rem;
+        }
+        &__card-footer {
+            margin-block-start: 1.5em;
+            height: 80px;
+            display: flex;
+            align-items: center;
+        }
+        &__card-footer-img {
+            width: 45px;
+            aspect-ratio: 1;
+            border-radius: 50%;
+        }
+
+        &__card-footer-info {
+            margin-inline-start: 1em;
+        }
+
+        &__card-footer-title {
+            color: $veryDarkBlue;
+            font-size: 1.4rem;
+            margin-block-end: .3em;
+        }
+        &__card-footer-text {
+            color: $lightBlue;
+            font-size: 1.3rem;
+        }
+
+
+        
+        &__card-link {
+            text-decoration: none;
+            position: absolute;
+            right: 1.5em;
+            bottom: 1.3em;
+            display: grid;
+            place-items: center;
+            width: 35px;
+            height: 35px;
+            font-size: 1.8rem;
+            color: $darkBlue;
+            background-color: $veryLightBlue;
+            border-radius: 50%;
+            z-index: 1000;
+        }
+
+        &__card-social-box {
+            position: absolute;
+            display: none;
+            align-items: center;
+            padding: 2em 3em;
+            inset-inline: 0;
+            bottom: 0;
+            height: 80px;
+            background-color: $veryDarkBlue;
+            border-radius: 0 0 10px 10px;
+
+                &.active {
+                    display: flex;
+                }
+
+                span {
+                    font-size: 1.6rem;
+                    text-transform: uppercase;
+                    letter-spacing: 5px;
+                    color: $lightBlue;
+                    font-weight: 300;
+                    margin-inline-end: 1em;
+                }
+        }
+
+        &__card-social-link {
+            margin: 0.3em;
+            font-size: 2.6rem;
+            color: $pureWhite;
+        }
+
+}
 
 
 

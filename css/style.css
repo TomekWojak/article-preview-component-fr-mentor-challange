@@ -19,6 +19,97 @@ img {
   font-style: italic;
 }
 
+.cards {
+  padding: 6em 1em;
+}
+.cards__card {
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 10px;
+}
+.cards__card-img {
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+}
+.cards__card-body {
+  position: relative;
+  padding: 3em 1.5em 0;
+}
+.cards__card-title {
+  color: hsl(217, 19%, 35%);
+  font-size: 1.9rem;
+  margin-block-end: 1em;
+}
+.cards__card-text {
+  line-height: 25px;
+  color: hsl(214, 17%, 51%);
+  font-size: 1.4rem;
+}
+.cards__card-footer {
+  margin-block-start: 1.5em;
+  height: 80px;
+  display: flex;
+  align-items: center;
+}
+.cards__card-footer-img {
+  width: 45px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+}
+.cards__card-footer-info {
+  margin-inline-start: 1em;
+}
+.cards__card-footer-title {
+  color: hsl(217, 19%, 35%);
+  font-size: 1.4rem;
+  margin-block-end: 0.3em;
+}
+.cards__card-footer-text {
+  color: hsl(212, 23%, 69%);
+  font-size: 1.3rem;
+}
+.cards__card-link {
+  text-decoration: none;
+  position: absolute;
+  right: 1.5em;
+  bottom: 1.3em;
+  display: grid;
+  place-items: center;
+  width: 35px;
+  height: 35px;
+  font-size: 1.8rem;
+  color: hsl(214, 17%, 51%);
+  background-color: hsl(210, 46%, 95%);
+  border-radius: 50%;
+  z-index: 1000;
+}
+.cards__card-social-box {
+  position: absolute;
+  display: none;
+  align-items: center;
+  padding: 2em 3em;
+  inset-inline: 0;
+  bottom: 0;
+  height: 80px;
+  background-color: hsl(217, 19%, 35%);
+  border-radius: 0 0 10px 10px;
+}
+.cards__card-social-box.active {
+  display: flex;
+}
+.cards__card-social-box span {
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  color: hsl(212, 23%, 69%);
+  font-weight: 300;
+  margin-inline-end: 1em;
+}
+.cards__card-social-link {
+  margin: 0.3em;
+  font-size: 2.6rem;
+  color: hsl(0, 0%, 100%);
+}
+
 @media (576px <= width) {
   .cards {
     height: 100vh;
