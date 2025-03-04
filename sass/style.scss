@@ -7,9 +7,15 @@
     box-sizing: border-box;
 }
 
+html {
+    font-size: 62.5%;
+}
+
+
 body {
     font-family: "Manrope", sans-serif;
     background-color: $veryLightBlue;
+    font-size: 1.6rem;
 }
 
 img {
@@ -19,10 +25,57 @@ img {
 
 .cards {
     padding: 6em 1em;
-
+        &__card {
+            background-color: $pureWhite;
+            border-radius: 10px;
+        }
         &__card-img {
             width: 100%;
+            border-radius: 10px 10px 0 0;
         }
+        &__card-body {
+            padding: 2em;   
+        }
+        &__card-title {
+            color: $veryDarkBlue;
+            font-size: 1.9rem;
+            margin-block-end: 1em;
+        }
+        &__card-text {
+            line-height: 25px;
+            color: $darkBlue;
+            font-size: 1.4rem;
+        }
+        &__card-footer {
+            margin-block-start: 1.5em;
+            height: 80px;
+            display: flex;
+            align-items: center;
+        }
+        &__card-footer-img {
+            width: 45px;
+            aspect-ratio: 1;
+            border-radius: 50%;
+        }
+
+        &__card-footer-info {
+            margin-inline-start: 1em;
+        }
+
+        &__card-footer-title {
+            color: $veryDarkBlue;
+            font-size: 1.4rem;
+            margin-block-end: .3em;
+        }
+        &__card-footer-text {
+            color: $lightBlue;
+            font-size: 1.3rem;
+        }
+
+
+        
+      
+
 }
 
 

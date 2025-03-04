@@ -4,9 +4,14 @@
   box-sizing: border-box;
 }
 
+html {
+  font-size: 62.5%;
+}
+
 body {
   font-family: "Manrope", sans-serif;
   background-color: hsl(210, 46%, 95%);
+  font-size: 1.6rem;
 }
 
 img {
@@ -17,8 +22,49 @@ img {
 .cards {
   padding: 6em 1em;
 }
+.cards__card {
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 10px;
+}
 .cards__card-img {
   width: 100%;
+  border-radius: 10px 10px 0 0;
+}
+.cards__card-body {
+  padding: 2em;
+}
+.cards__card-title {
+  color: hsl(217, 19%, 35%);
+  font-size: 1.9rem;
+  margin-block-end: 1em;
+}
+.cards__card-text {
+  line-height: 25px;
+  color: hsl(214, 17%, 51%);
+  font-size: 1.4rem;
+}
+.cards__card-footer {
+  margin-block-start: 1.5em;
+  height: 80px;
+  display: flex;
+  align-items: center;
+}
+.cards__card-footer-img {
+  width: 45px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+}
+.cards__card-footer-info {
+  margin-inline-start: 1em;
+}
+.cards__card-footer-title {
+  color: hsl(217, 19%, 35%);
+  font-size: 1.4rem;
+  margin-block-end: 0.3em;
+}
+.cards__card-footer-text {
+  color: hsl(212, 23%, 69%);
+  font-size: 1.3rem;
 }
 
 @media (576px <= width) {
