@@ -89,7 +89,11 @@ img {
   z-index: 1000;
   transition: background-color 0.3s, color 0.3s;
 }
-.cards__card-link:hover, .cards__card-link:focus {
+.cards__card-link.active {
+  background-color: hsl(214, 17%, 51%);
+  color: hsl(0, 0%, 100%);
+}
+.cards__card-link:hover {
   background-color: hsl(214, 17%, 51%);
   color: hsl(0, 0%, 100%);
 }

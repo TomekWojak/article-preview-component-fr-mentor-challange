@@ -96,8 +96,11 @@ img {
             cursor: pointer;
             z-index: 1000;
             transition: background-color .3s, color .3s;
-
-                &:hover, &:focus {
+                &.active {
+                    background-color: $darkBlue;
+                    color: $pureWhite;
+                }
+                &:hover {
                     background-color: $darkBlue;
                     color: $pureWhite;
                 }
