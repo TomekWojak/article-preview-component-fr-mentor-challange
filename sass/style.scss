@@ -1,0 +1,45 @@
+
+@use './_colors' as *;
+
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Manrope", sans-serif;
+    background-color: $veryLightBlue;
+}
+
+img {
+    display: block;
+    font-style: italic;
+}
+
+.cards {
+    padding: 6em 1em;
+
+        &__card-img {
+            width: 100%;
+        }
+}
+
+
+
+
+
+
+
+// ========== MEDIA ==========
+
+
+@media(576px <= width) {
+    .cards {
+        height: 100vh;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
